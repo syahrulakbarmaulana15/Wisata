@@ -4,6 +4,7 @@ import './navbar.scss'
 import {MdOutlineTour} from 'react-icons/md'
 import {IoIosCloseCircle} from 'react-icons/io'
 import {TbGridDots} from 'react-icons/tb'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [active, setActive] = useState('navBar')
@@ -29,15 +30,21 @@ const Navbar = () => {
                 <div className={active}>
                     <ul className="navLists flex">
                         <li className="navItem">
-                            <a href="" className="navLink">Home</a>
+
+                            <Link to="/" className="navLink">Home</Link>
+                            
                         </li>
 
                         <li className="navItem">
-                            <a href="" className="navLink">Contact Us</a>
+                            
+                            <Link to="" className="navLink">Contact Us</Link>
+                            
                         </li>
                         
                         <button className='btn'>
-                            <a href="#">Cart</a>
+                            
+                            <Link to="/cart">Cart</Link>
+                            
                         </button>
                         </ul>
                         
