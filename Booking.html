@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Booking.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="video-container">
+            <video src="./images/minimalism_-_14124 (720p).mp4" autoplay loop muted></video>
+        </div>
+        <div class="content">
+            <h2>Book Your Destination</h2>
+            <h3>Get ready for your<br>Dream Destinations</h3>
+        </div>
+        <nav>
+            <div class="left">
+                <!-- <a href="/index.html"><img src="/image/traveller log.png" alt=""></a> -->
+            </div>
+            <div class="right">
+                <div class="right1">
+                    <a href="/index.html">Home</a>
+                    <a href="">Discover</a>
+                    <a href="">Location</a>
+                    <a href="">About Us</a>
+                    <a href="/htmls/support.html">Support</a>
+                </div>
+            </div>
+            <div class="right2">
+                <div class="navigation">
+                    <input type="checkbox" class="toggle-menu" id="toggle-menu">
+                    <label class="hamburger" for="toggle-menu"></label>
+                    <div class="menu">
+                        <a href="/index.html">Home</a>
+                        <a href="">Discover</a>
+                        <a href="">Location</a>
+                        <a href="">About Us</a>
+                        <a href="/htmls/support.html">Support</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container_box">
+    <h1>Booking Form</h1>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      <div class="form-group">
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="adults">Number of Adults:</label>
+        <input type="number" id="adults" name="adults" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="children">Number of Children:</label>
+        <input type="number" id="children" name="children" min="0" required>
+      </div> -->
+      <div class="form-group">
+        <input type="submit" value="Book Now">
+      </div>
+    </form>
+  </div>
+    </div>
+<h1></h1>  
+</body>
+
+
+
+
+<script>
+    function storeFormData() {
+      const formData = {
+        firstname: document.getElementById('firstname').value,
+        lastname: document.getElementById('lastname').value,
+        email: document.getElementById('email').value,
+        gender: document.getElementById('gender').value,
+        checkin: document.getElementById('checkin').value,
+        checkout: document.getElementById('checkout').value,
+        // adults: document.getElementById('adults').value,
+        // children: document.getElementById('children').value,
+      };
+
+      
+      const formDataJSON = JSON.stringify(formData);
+
+     
+      localStorage.setItem('bookingFormData', formDataJSON);
+    }
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      storeFormData();
+      this.reset(); 
+      setTimeout(function() {
+        window.location.href = 'payment.html';
+      }, 1000);
+    });
+  </script>
+<script src="booking.js"></script>
+</html>

@@ -1,0 +1,218 @@
+/* signup page styling */
+body{
+    margin: 0;
+    padding: 0;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    /* background-color: #0074d3c7; */
+    background-image: url("https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#maincontainer{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+#left{
+    background-color:#70bfff98;
+    height: 550px;
+    display: flex;
+    /* min-height: 500px;
+    max-height: 500px; */
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 20px;
+    /* opacity: 85%; */
+    font-size: 16px;
+    border-radius: 15px;
+}
+#shortmsg{
+    margin-left: 5px;
+    margin-right: 20px;
+}
+#right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #70bfff98;
+    padding: 20px;
+    /* min-height: 500px; */
+    /* height: 500px; */
+    border-radius: 15px;
+}
+#success{
+    text-align: center;
+    margin-top: 50px;
+}
+#right>form,h1,h3,.termContainer,#inst,#newone{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#inputdetail{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+#inputdetail>div{
+    width: 47%;
+}
+#inputdetail input,#email,#password{
+    width: 95%;
+    line-height: 30px;
+    border: none;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 1px 4px;
+}
+#submit{
+    width: 93%;
+    color: whitesmoke;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #086fc4e8;
+}
+input{
+    margin-top: 5px;
+    line-height: 20px;
+}
+#submit{
+    width: 100%;
+    line-height: 30px;
+}
+#image{
+    width: 100%;
+    display: flex;
+}
+#image>img{
+    width: 45%;
+    margin: auto;
+}
+#inst{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#newone{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+}
+#left img{
+    width: 100%;
+    border-radius: 15px;
+}
+#left>div>p{
+    padding-left: 20px;
+    line-height: 30px;
+    font-size: 18px;
+}
+@media screen and (min-width : 700px) and (max-width: 900px) {
+    #maincontainer{
+        width: 80%;
+    }
+}
+@media screen and (min-width : 600px) and (max-width: 699px) {
+    #maincontainer{
+        width: 90%;
+    }
+}
+@media screen and (min-width : 440px) and (max-width: 599px) {
+    #maincontainer{
+        width: 95%;
+        flex-direction: column;
+    }
+    #inputdetail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    #inputdetail>div{
+        width: 100%;
+    }
+    #left{
+        height: auto;
+        width: 60%;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    #left img{
+        width: 100%;
+        border-radius: 15px;
+        margin: 0px;
+    }
+    #left>div:nth-child(3),#left>div:nth-child(2){
+        display: none;
+    }
+    #inputdetail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    #inputdetail>div{
+        width: 100%;
+    }
+    #right{ 
+        width: 70%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto; 
+    }
+}
+@media screen and (min-width : 100px) and (max-width: 439px) {
+    #maincontainer{
+        width: 95%;
+        flex-direction: column;
+    }
+    #left{
+        height: auto;
+        width: 60%;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    #left img{
+        width: 100%;
+        border-radius: 15px;
+        margin: 0px;
+    }
+    #left>div:nth-child(3),#left>div:nth-child(2){
+        display: none;
+    }
+    #inputdetail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    #inputdetail>div{
+        width: 100%;
+    }
+    #right{ 
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
